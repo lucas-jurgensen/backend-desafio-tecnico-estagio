@@ -36,17 +36,28 @@ API desenvolvida como parte do teste técnico para uma vaga de Estágio Full Sta
   npm install
 ```
 
+**Crie o banco de dados**
+
+No seu servidor MySQL, crie um banco de dados:
+
+```bash
+  CREATE DATABASE nome_do_banco_de_dados
+```
+
 **Configure as variáveis de ambiente**
 
 -   Crie uma cópia do arquivo `.env.example` e renomeie para `.env`.
     ```bash
       cp .env.example .env
     ```
--   Abra o arquivo `.env` e preencha a `DATABASE_URL` com as suas credenciais do MySQL.
+-   Abra o arquivo `.env` e preencha a `DATABASE_URL` com as suas credenciais e o nome do banco de dados criado.
+
+```bash
+  DATABASE_URL="mysql://USER:SENHA@HOST:PORT/nome_do_banco_de_dados"
+```
 
 **Configure o banco de dados**
 
--   Crie um banco de dados no seu servidor MySQL.
 -   Execute as migrações do Prisma para criar as tabelas:
     ```bash
       npx prisma migrate dev
