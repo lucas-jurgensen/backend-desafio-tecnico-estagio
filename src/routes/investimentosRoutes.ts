@@ -3,9 +3,9 @@ import { createInvestimentoController, deleteInvestimentoController, getInvestim
 
 const investimentoRouter = Router();
 
-investimentoRouter.post("/investimentos", createInvestimentoController);
-investimentoRouter.get("/investimentos", getInvestimentosController);
-investimentoRouter.put("/investimentos/:id", updateInvestimentoController);
-investimentoRouter.delete("/investimentos/:id", deleteInvestimentoController);
+investimentoRouter.post("/", createInvestimentoController);
+investimentoRouter.get("/", getInvestimentosController);
+investimentoRouter.put("/:id", updateInvestimentoController);
+investimentoRouter.delete("/:id", deleteInvestimentoController);
 
 export default investimentoRouter;

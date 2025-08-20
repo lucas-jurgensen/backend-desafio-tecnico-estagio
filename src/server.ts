@@ -6,7 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/", routes);
+app.get("/", (req, res) => {
+    res.status(200).send("OK, API no ar");
+});
+app.use("/investimentos", routes);
 
 app.listen(3000, () => {
     console.log("Servidor rodando em http://localhost:3000/");
