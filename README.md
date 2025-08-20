@@ -55,10 +55,10 @@ API desenvolvida como parte do teste técnico para uma vaga de Estágio Full Sta
 **Inicie o servidor**
 
 ```bash
-  npm run start
+  npm run dev
 ```
 
-O servidor estará rodando em `http://localhost:3000`.
+O servidor estará rodando em `http://localhost:3000/`.
 
 ## Endpoins da API
 
